@@ -21,7 +21,7 @@ Ces broches permettent de lire des valeurs de tension analogiques :
 - **A4 (GPIO4)**
 - **A5 (GPIO5)**
 
-Ces broches sont utilisées pour mesurer des capteurs analogiques (potentiomètres, capteurs de lumière, température, etc.)
+Ces broches sont utilisées pour mesurer des capteurs analogiques (==potentiomètres, capteurs de lumière, température==, etc.)
 
 ---
 
@@ -38,7 +38,7 @@ Utilisé pour la communication rapide avec des périphériques comme des écrans
 
 ### **4. Broches de Communication I2C (Inter-Integrated Circuit)**
 
-Utilisé pour connecter plusieurs périphériques comme des capteurs, des écrans OLED, etc. :
+Utilisé pour connecter plusieurs périphériques comme des capteurs, des ==**écrans OLED**==, etc. :
 
 - **SDA (GPIO8)** : Ligne de données I2C
 - **SCL (GPIO9)** : Ligne d’horloge I2C

@@ -526,33 +526,40 @@ $$Cov(X, Y) = E[XY] - E[X]E[Y]$$
 ---
 # POST INTRA : PREP FINAL
 
-# Variables aléatoires continues
-
-C'est une fonction X(s) qui, pour tout élément s de S, on retourne un réel.
-==X peut prendre une infinité de valeurs dans un intervalle donné==
-
-## Fonction de répartition continue
-
-Quand on était dans le cas discrète, la cumulation des proba était décrite sous forme d'escaliers; des cas particuliers et dénombrables marquaient ces sauts. Dans le cas continu il existe une **infinité de ces sauts**; les marches étant moins distinctes, on observe une ==fonction croissante lisse== 
-
-Ex.
-Soit X la variable aléatoire donnant la position d'une aiguille en angle radial ($0..2\pi$) en fonction d'un réel $\theta$ allant de ($0..1$)
-
-$$X = f(\theta) \ | \ \forall \ \theta \in [0..1], f(\theta) \rightarrow 2\pi\theta$$
-
-Comme c'est une fonction de répartition, un point décris la probabilité cumulée donc 
-$$F{x}(X=x) = P(X \leq x)$$ et donc que 
-$$F{x}(b) - F{x}(a) = P( a \lt X \leq b)$$
----
 # Rappel intégrales
 
 Soit $f$ une fonction continue sur un intervalle I, a et b deux points de I et $F$ une primitive de $f$ sur I. Le nombre $F(b)-F(a)$ est l'intégrale de la fonction $f$ de a à b notée
 
 $$\int_{a}^{b} f(x)dx = [F(x)]_{a}^{b}= F(b)-F(a)$$
 
+#### Intégrales de puissances
 
+$$\int_{a}^{b} x^{n}dx = \frac{x^{n+1}}{n+1}$$
 
-## Fonction de densité continue
+$$\int_{a}^{b} x^{3}dx = [\frac{x^{4}}{4}]_{a}^{b}$$
+
+# Variables aléatoires continues
+
+C'est une fonction X(s) qui, pour tout élément s de S, on retourne un réel.
+==X peut prendre une infinité de valeurs dans un intervalle donné==
+
+- **$F_X​(x)$ (densité) est l’intégrale de $f_X(x)$ (répartition)
+- **$f_X(x)$ (répartition) est la dérivée de $F_X(x)$ (densité)
+
+## Fonction de répartition continue (proba cumulée)
+
+Quand on était dans le cas discret, la cumulation des proba était décrite sous forme d'escaliers; des cas particuliers et dénombrables marquaient ces sauts. Dans le cas continu il existe une **infinité de ces sauts**; les marches étant moins distinctes, on observe une ==fonction croissante lisse== 
+
+Ex.
+Soit X la variable aléatoire donnant la position d'une aiguille en angle radial ($0..2\pi$) en fonction d'un réel $\theta$ allant de ($0..1$)
+
+$$X = f(\theta) \ | \ \forall \ \theta \in [0..1], f(\theta) \rightarrow 2\pi\theta$$
+
+Comme c'est une fonction de **répartition**, un point décris la probabilité cumulée donc 
+$$F{x}(X=x) = P(X \leq x)$$ et donc que 
+$$F{x}(b) - F{x}(a) = P( a \lt X \leq b)$$
+
+## Fonction de densité continue (proba ponctuelle)
 
 La dérivé de la fonction de répartition
 
@@ -562,3 +569,18 @@ Critère de densité:
 
 
 ==Une variable **continue** peut prendre une infinité de valeurs dans un intervalle donné. Comme il y a **une infinité de nombres possibles**, la probabilité d’en choisir un **précisément** est **0**==
+
+#### Ex.
+
+Soit 
+$$
+\begin{equation}
+    fn(x) =
+    \begin{cases*}
+	    c(4x-x^n) & si 0 <x<1  \\
+	      0        & sinon \\
+    \end{cases*}
+  \end{equation}
+$$
+
+Analyse : 

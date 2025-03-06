@@ -2,12 +2,12 @@
 	"nodes":[
 		{"id":"aaa17c3a4b81f54b","type":"file","file":"ITL1901_LNG/Cheat sheet italien.md","x":920,"y":-95,"width":600,"height":1877},
 		{"id":"2a6099f61d26af60","type":"file","file":"IFT1227_ARC/notes_1227.md","x":-1080,"y":-95,"width":600,"height":836,"color":"#007bff"},
-		{"id":"0755f81cc8523761","type":"file","file":"IFT2015_DSA/Notes_2015.md","x":-1080,"y":840,"width":600,"height":942,"color":"1"},
+		{"id":"0755f81cc8523761","type":"file","file":"Bac-Info/IFT2015_DSA/Notes_2015.md","x":-1080,"y":840,"width":600,"height":942,"color":"1"},
 		{"id":"a071e11b1e457dfe","type":"file","file":"IFT1227_ARC/devoir_02_ift1227.md","x":-2000,"y":-101,"width":800,"height":581,"color":"#0457b2"},
 		{"id":"523374444b9a132e","type":"file","file":"solo_kotlin/Bases Kotlin.md","x":-436,"y":840,"width":592,"height":1000,"color":"1"},
 		{"id":"5507a68a5544936a","type":"file","file":"IFT1227_ARC/devoir_03_ift1227.md","x":-2000,"y":520,"width":800,"height":1262,"color":"#045bba"},
 		{"id":"032923dff391138e","type":"file","file":"IFT1025_JAVA/notes_1025.md","x":-436,"y":-94,"width":600,"height":835},
-		{"id":"e4b9a1f4044af982","x":-1080,"y":1960,"width":600,"height":920,"color":"1","type":"file","file":"IFT2015_DSA/DV02_2015.md"},
+		{"id":"e4b9a1f4044af982","type":"file","file":"IFT2015_DSA/DV02_2015.md","x":-1080,"y":1960,"width":600,"height":920,"color":"1"},
 		{"id":"08da28b6d9cb73a5","type":"file","file":"IFT1810_C/notes_c.md","x":-432,"y":-600,"width":592,"height":418},
 		{"id":"7dccd88cddcac66b","type":"file","file":"MAT1978_PBSTATS/MAT1978_extra.md","x":240,"y":-94,"width":592,"height":680,"color":"3"}
 	],

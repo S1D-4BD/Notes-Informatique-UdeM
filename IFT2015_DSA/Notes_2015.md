@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 ---
 attente = file
@@ -8,7 +8,7 @@ hierarchie= arbre
 ---
 
 # Piles
-=======
+
 L'abstraction de donnée sert à spécifier les données utilisées, les opérations possibles et les possibles erreurs (ex. la pile défini les données stockées, le push le pop et défini l erreur du stackOverFlow). ==C'est utile pour la réutilisation et la modification==
 # **Structures de données linéaires**
 
@@ -19,7 +19,6 @@ Ce sont des collections d'éléments **organisés séquentiellement** tel:
 - **Les listes chaînées (Linked List)** : Taille dynamique, mais accès plus len
 - **Les files (Queues)** : FIFO (First In, First Out)
 ## 1. Piles
->>>>>>> f2c841a (notes update)
 
 **Concept: Last in First Out**
 
@@ -29,7 +28,7 @@ Ce sont des collections d'éléments **organisés séquentiellement** tel:
 
 **Notation post-fixée** : Format d'expressions mathématiques qui facilite l'interprétation des opérations, ==pas besoin des parenthèse==. L'**empilement** consiste à **entrer des valeurs**, le **dépilement** consiste à effectuer une **opération** lorsqu'on croise un opérateur
 
-<<<<<<< HEAD
+
 
 Exemple: 1 2 3 + 4 5 6 * - 7 * + - 8 9 * +
 
