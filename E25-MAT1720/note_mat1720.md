@@ -2,9 +2,51 @@
 
 ---
 
-
-
 # **1. Principes de dénombrement**
+
+## Additif
+
+Règle **générale** : à utiliser si on compte des événements **qui ne peuvent pas arriver **en même temps**, donc des cas **mutuellement exclusifs**.
+
+>***disjoint*** : "A ne se produit pas en même temps que B, ne se chevauchent pas"
+
+
+==**exemple** : On choisi 7 questions parmi 10, mais on doit au moins prendre 3 parmi les 5 premières**==
+
+Nous ne pouvons pas choisir en même temps 3,4 et 5 questions parmi les 5 premières; on doit additionner les cas
+
+- cas 1) prendre 3 questions parmi 5, 4 dans les 5 restantes
+- cas 2) prendre 4 questions parmi 5, 3 dans les 5 restantes
+- cas 3) prendre 5 questions parmi 5, 2 dans les 5 restantes
+
+OU à l'inverse, **retirer** de l'univers de tout les choix les cas inadmissibles possibles (complémentarité)
+
+- de **tout** les choix, retirer le choix de prendre 2 questions parmis 5, prendre les 5 restantes
+
+## Multiplicatif
+
+Règle **générale** : Si j'ai n façons de choisir un A, et qu'il y a **m** choix possibles pour chaque choix de A, alors j'ai n * m choix possibles
+
+>**il s'agit d'un arbre donc le premier niveau est les options de A, et le deuxième les options en B** on a donc pour **chaque branche de A toutes les options de B**
+
+==**question** : choisir quel train entre A, B ou C prendre, puis quel bus entre 1, 2, 3 ou 4==
+
+###### Exemple 1 : 
+*Combien de plaques d'immatriculation de 7 charactères on peut faire si les 3 premiers charactères sont des lettre et les 4 derniers des chiffres?*
+
+> Je prend successivement 7 lettres et chiffres, donc 26 * 26 * 26 * 10 * 10 * 10
+
+##### Exemple 2:
+
+*Combien de plaques d'immatriculation de 7 charactères on peut faire si les 3 premiers charactères sont des lettres et les 4 derniers des chiffres? et en inversant lettres et chiffres?*
+
+> $$ 26*25*24*10*9*8*7 = 78\ 624\ 000$$
+>  $$ 10*9*8*26*25*24*23 = 258\ 336\ 000$$
+
+## Résumé additif multiplicatif :
+
+>Choix entre différentes options? -> **==additif==**
+>Choix entre des options successives? -> **==multiplicatif==**
 
 ## **Permutations (tout, ordonné ou non)**
 
@@ -33,7 +75,9 @@ Règle générale : si on tente de former **tout les vecteurs résultats d'une s
 
 ## **Arrangements (partiel, ordonné)**
 
-Règle générale : si on tente de choisir k objets parmi n objets, c'est comme si on construisait l'arbre initial complet de n! choix , mais qu'on ne considérait que les k première branches ; on ignore alors (n-k)! conditions
+Un arrangement, ***c'est une permutation partielle***
+
+Règle générale : si on tente de choisir k objets parmi n objets, c'est comme si on construisait l'arbre initial complet des n! choix , mais qu'on ne considérait que les k première branches ; on ignore alors (n-k)! conditions
 
 >==On forme un arbre dont on ne compte que les **k premières branches** et **ignore les n-k restantes**==
 - **Formule :** $A(n, k) = \frac{n!}{(n-k)!}$ 
@@ -52,7 +96,7 @@ Règle générale : on tente de relier des choix entre eux
 ## **Partitions combinaisons avec répétitions/remises** 
 
 Nous avons **k** bacs (ou groupes) et **n** objets à répartir.
-- Les **objets** sont représentés par des étoiles (*).
+- Les **objets** sont représentés par des étoiles ( * ).
 - Les **séparateurs** entre les bacs sont des bâtons (**|**).
 - Puisque nous avons **k** bacs, nous avons **k-1 bâtons**.
 
@@ -141,49 +185,6 @@ donc $\frac {18!}{14!4!}$
 	- Calculer les combinaisons de 2 bacs parmi 5 (choisir quels bac auront 7 balles)
 	- Multiplier par les combinaisons de 4 bâtons parmi 0+4 éléments ${4 \choose 4}$
 
-
-
-
-
----
-
-
-## Additif
-
-Règle **générale** : Si j'ai ***n*** façons de choisir un A, ***m*** façons de choisir une tache B et que je ne peux pas choisir les 2 en même temps, alors j'ai n + m choix
-
->***disjoint*** implique "A ne se produit pas en même temps que B, ne se chevauchent pas"
-
->**Il s'agit de 2 arbres cotes à cote**s, et on additionne le nombre de branches
-
-==**exemple** : choisir entre prendre le **train A, B ou C** ou prendre le **bus 1, 2, 3 ou 4**==
-
-Je ne peux pas être dans le train et le bus en même temps, mon choix est dans l'ensemble de choix $C = \{ A,B,C,1,2,3,4 \}$
-
-## Multiplicatif
-
-Règle **générale** : Si j'ai n façons de choisir un A, et qu'il y a **m** choix possibles pour chaque choix de A, alors j'ai n * m choix possibles
-
->**il s'agit d'un arbre donc le premier niveau est les options de A, et le deuxième les options en B** on a donc pour **chaque branche de A toutes les options de B**
-
-==**question** : choisir quel train entre A, B ou C prendre, puis quel bus entre 1, 2, 3 ou 4==
-
-###### Exemple 1 : 
-*Combien de plaques d'immatriculation de 7 charactères on peut faire si les 3 premiers charactères sont des lettre et les 4 derniers des chiffres?*
-
-> Je prend successivement 7 lettres et chiffres, donc 26 * 26 * 26 * 10 * 10 * 10
-
-##### Exemple 2:
-
-*Combien de plaques d'immatriculation de 7 charactères on peut faire si les 3 premiers charactères sont des lettres et les 4 derniers des chiffres? et en inversant lettres et chiffres?*
-
-> $$ 26*25*24*10*9*8*7 = 78\ 624\ 000$$
->  $$ 10*9*8*26*25*24*23 = 258\ 336\ 000$$
-
-## Résumé additif multiplicatif :
-
->Choix entre différentes options? -> **==additif==**
->Choix entre des options successives? -> **==multiplicatif==**
 
 ---
 # **2. Ensembles**
