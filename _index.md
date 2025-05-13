@@ -1,3 +1,4 @@
+
 ## Exercice 1
 
 
@@ -11,29 +12,39 @@
 </head>
 
 <body>
+
     <h1>Lorem Ipsum</h1>
     <h2>Paragraphe 1</h2>
+    
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat ultrices sodales. Donec a ex magna.
-        
+        arcu tristique eget. Cras porttitor auctor metus sit amet fermentum. Interdum et malesuada fames ac ante ipsum
+        primis in faucibus. Etiam vitae odio faucibus, consectetur est sit amet, convallis dui.
     </p>
+    
     <h2>Paragraphe 2</h2>
+    
     <p>
-        Ut sed ornare felis, vitae vehicula lorem. Duis egestas massa sit amet dolor placerat imperdiet. Nam auctor quam
-        
+        ultrices sem a ultrices. Phasellus porttitor fermentum dolor et dapibus. Ut consectetur, justo vitae facilisis
+        ultrices, tellus neque molestie enim, ac blandit dolor massa sit amet lacus. Fusce eu lacinia diam.
     </p>
+    
     <h2>Paragraphe 3</h2>
+    
     <p>
-	Vestibulum feugiat elementum turpis. Nam ut ante lobortis, pulvinar nulla sit amet, semper dui. Quisque a turpis
-      
+        orci luctus et ultrices posuere cubilia curae; Sed lectus est, maximus ut odio eget, rhoncus dapibus odio. Donec
+        sit amet nisl mauris.
     </p>
+    
     <a href="www.google.com">Google</a>
     <br>
+    
     <img alt="Lorem Ipsum" src="./lorem.png">
 </body>
 
 </html>
 ```
+
+<div style="page-break-after: always;"></div>
 
 ## Exercice 2
 
@@ -50,22 +61,20 @@
     <h1>Lorem Ipsum</h1>
     <h2>Paragraphe 1</h2>
     <p>
-        Cras porttitor auctor metus sit amet fermentum. Interdum et malesuada fames ac ante ipsum
+        arcu tristique eget. Cras porttitor auctor metus sit amet fermentum. Interdum et malesuada fames ac ante ipsum
         primis in faucibus. Etiam vitae odio faucibus, consectetur est sit amet, convallis dui.
     </p>
     <h2>Paragraphe 2</h2>
     <p>
-         Phasellus porttitor fermentum dolor et dapibus. Ut consectetur, justo vitae facilisis
+        ultrices sem a ultrices. Phasellus porttitor fermentum dolor et dapibus. Ut consectetur, justo vitae facilisis
         ultrices, tellus neque molestie enim, ac blandit dolor massa sit amet lacus. Fusce eu lacinia diam.
     </p>
+    
     <h2>Paragraphe 3</h2>
+    
     <p>
-        Vestibulum feugiat elementum turpis. Nam ut ante lobortis, pulvinar nulla sit amet, semper dui. Quisque a turpis
-        sed arcu malesuada vulputate vel in magna. Sed accumsan metus ut nunc luctus pretium. Vestibulum quis finibus
         nunc, ut blandit ligula. Pellentesque arcu eros, sodales a mi vel, egestas pharetra urna. Aliquam sit amet nulla
         quis purus hendrerit lacinia vel nec est. Curabitur at lectus quam. Vestibulum ante ipsum primis in faucibus
-        orci luctus et ultrices posuere cubilia curae; Sed lectus est, maximus ut odio eget, rhoncus dapibus odio. Donec
-        sit amet nisl mauris.
     </p>
 
     <h3>Liste ordonnee</h3>
@@ -101,13 +110,25 @@
         <meta charset="utf8">
     </head>
     <body>
-        <a href="lab1-3-1.html"><img src="./galerie1.png" alt="gal1" width="100"></a>
-        <a href="lab1-3-2.html"><img src="./galerie2.png" alt="gal1" width="100"></a>
-        <a href="lab1-3-3.html"><img src="./galerie3.png" alt="gal1" width="100"></a>
+        <a href="lab1-3-1.html">
+	        <img src="./galerie1.png" alt="gal1" width="100">
+        </a>
+        <a href="lab1-3-2.html">
+	        <img src="./galerie2.png" alt="gal1" width="100">
+        </a>
+        <a href="lab1-3-3.html">
+	        <img src="./galerie3.png" alt="gal1" width="100">
+        </a>
         <br>
-        <a href="lab1-3-4.html"><img src="./galerie4.png" alt="gal1" width="100"></a>
-        <a href="lab1-3-5.html"><img src="./galerie5.png" alt="gal1" width="100"></a>
-        <a href="lab1-3-6.html"><img src="./galerie6.png" alt="gal1" width="100"></a>
+        <a href="lab1-3-4.html">
+	        <img src="./galerie4.png" alt="gal1" width="100">
+        </a>
+        <a href="lab1-3-5.html">
+	        <img src="./galerie5.png" alt="gal1" width="100">
+        </a>
+        <a href="lab1-3-6.html">
+	        <img src="./galerie6.png" alt="gal1" width="100">
+        </a>
     </body>
 </html>
 ```
@@ -128,6 +149,8 @@ Et le fichier lab1-3-1.html :
 </html>
 ```
 
+<div style="page-break-after: always;"></div>
+
 ## Exercice 4
 
 ```html
@@ -137,27 +160,37 @@ Et le fichier lab1-3-1.html :
         <title>Exercice 4</title>
         <meta charset="utf8">
     </head>
+    
     <body>
         <img src="./galerie1.png" alt="gal1" width="100">
-        <button>galerie1</button>
+	        <button>galerie1</button>
         <br>
+        
         <img src="./galerie2.png" alt="gal2" width="100">
-        <button>galerie2</button>
-        <br>
+	        <button>galerie2</button>
+	    <br>
+        
         <img src="./galerie3.png" alt="gal3" width="100">
-        <button>galerie3</button>
+	        <button>galerie3</button>
         <br>
+        
         <img src="./galerie4.png" alt="gal4" width="100">
-        <button>galerie4</button>
+	        <button>galerie4</button>
         <br>
+        
         <img src="./galerie5.png" alt="gal5" width="100">
-        <button>galerie5</button>
+	        <button>galerie5</button>
         <br>
+        
         <img src="./galerie6.png" alt="gal6" width="100">
         <button>galerie6</button>
+        
     </body>
 </html>
 ```
+
+<div style="page-break-after: always;"></div>
+
 
 ## Exercice 5
 

@@ -64,6 +64,7 @@ Pour différencier les services qui tournent sur une même machine, on utilise d
 | SMTP      | 25            | Envoi de courriels            |
 | IMAP      | 143           | Lecture distante de courriels |
 | FTP       | 21            | Transfert de fichiers         |
+| ==DNS==   | 53            | bref                          |
 
 > **Les ports sont gérés par la couche transport (make it make sense, ports = service wtf**
 
@@ -96,7 +97,6 @@ C’est une URI qui **localise** une ressource
 | `#ancre`       | Ancre dans la page                         |
 
 ---
-
 ## DNS – Trouver une adresse IP
 
 Le **DNS (Domain Name System)** traduit un nom (ex: `www.iro.umontreal.ca`) en une **adresse IP**.
@@ -113,6 +113,59 @@ Le **DNS (Domain Name System)** traduit un nom (ex: `www.iro.umontreal.ca`) en u
 >  Commandes utiles  pour trouver le serveur dns:
 > - `scutil --dns` (Mac)
 > - `ipconfig /all` (Windows)
+
+Les noms de machine doivent être sous la forme de ***Fully Qualified Domain Name***
+www.google.com.
+
+il y a un point à la fin, lecture de droite à gauche
+>www= nom de machine
+  google = nom de domaine ou se trouve la machine
+. com = nom de domaine plus haut niveau
+
+DNS = système client/serveur
+Serveur= ordinateur qui a une appli qui roule en permanence, et qui écoute sur un port
+échanges d info sur TCP
+
+Structure de recherche des domaines (TLD = top level domain)
+.ca etc = tld
+
+![[DNS_structure.png]]
+
+- 13 serveurs racine (za3ma)
+- évite trafic, mais plein
+Pourquoi?
+
+Alors si ces serveurs tombent en panne alors on évite la galère. Les TLD il contiennent la liste de tout les domaines de plus haut niveau ET C'EST QUI LE DNS QUI SOCCUPE DE CES IP
+
+==chacun contient la liste des serveurs DNS qui contient les domaines en dessous de lui==
+
+cira (.qc.ca.) ils ont dit "pour tout ce qui es termine par umontreal.ca allez voir ces 2 ordi la"
+la délégation se lis de droite à gauche
+- umontrea.ca s'occupe de iro.umontreal.ca
+### domaine vs zone
+
+domaine.com = fini en .com (juste un nom, otut ce qui termine pareil = meme domaine)
+++zones dans 1 domaine
+
+cira gère .ca
+udem qui gère umontreal.ca
+diro qui gère iro.umontreal.ca
+
+**C'est un fichier texte qui est lu en permanence qui donne les ip et leur DNS**
+
+pour que .ca délègue, on va avoir un glue record, qui va coller (les flèches colorées du diagramme)
+
+des que jme connecte on me fourni des ip de dns, je vais ask un des x serveurs quon ma fourni
+
+A = c est quoi ipv4?
+
+DNS cache = DNS récursif (qui garde en mémoire aussi)
+>requêtes récursives = je pose la question, débrouille toi pour me donner la bonne 
+>requêtes itératives = il travaille jusqu'à donner la meilleure réponse possible pour aider (pas la bonne, mais une indication)
+
+C'est un serveur qui ne connait que 13 serveurs racine et recherche dynamiquement les autres DNS : meme si on change un des adresse des DNS, il va s ajuster
+
+`nslookup`
 
 ---
 ##  HTTP – Protocole de communication web

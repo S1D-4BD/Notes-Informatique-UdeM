@@ -520,7 +520,6 @@ end Behavioral;
 
 ### Components en VHDL (et port map)
 
-<div style="page-break-after: always;"></div>
 
 ```VHDL
 library IEEE;
@@ -1197,6 +1196,9 @@ Arithmetic Logic Unit, c'est le composant qui contient tout les types d'opérati
 1) Comme $F_2$ = 1, on sélectionne $\overline B$
 2) Les opérations *disponibles* sont $A \wedge \overline B, A \vee  \overline B, A+ \overline B$ 
 3) Comme $F_{1:0}$ = 01, l'opération sélectionnée est $A \vee \overline B$
+
+<div style="page-break-after: always;"></div>
+
 
 ---
 # CPU Single Cycle

@@ -1,16 +1,5 @@
 
 ---
-# Méthodes de preuves
-
-## RECAP Ensembles
-## RECAP Logique
-## Preuve directe
-## Preuve par contradiction
-## Preuve par induction
-## Relations
-## Fonctions
-
----
 1.0 parenthésage
 1.0.1 pigeonnier
 # **1.1 Les langages REPEAT**
@@ -33,12 +22,11 @@ Machines de type REPEAT sont des modélisations de langages **séquentiels** à 
 ### Propriétés structurelles et récursives
 
 - Soit $R_p$ l'ensemble des programmes de type REPEAT 
-- Soit $S_0$ l'ensemble des atomique (opérations de bases permises) telle que $S_0 =\{(inc()) \cup (r_i \leftarrow r_j)\}$, 
-- $S_0 \subset R_P$
+- Soit $S_0$ l'ensemble des programmes atomiques (opérations de bases permises) tel que $$S_0 =\{(inc()) \cup (r_i \leftarrow r_j)\}$$avec $S_0 \subset R_P$$
 
-**On établie que **
-- la concaténation de deux instructions atomique est toujours élément d'un programme de type REPEAT
-- La répétition d'un programme REPEAT renvoie aussi un programme REPEAT
+**==On établie que:==**
+- **la concaténation de deux instructions atomique est toujours élément d'un programme de type REPEAT**
+- **La répétition d'un programme REPEAT renvoie aussi un programme REPEAT**
 
 1) $\forall S_0, S_1, \ (S_0 \cdot S_1) \in R_p$ 
 > l'ensemble des programmes de type REPEAT **==est clôturé pour la concaténation==**; la composition séquentielle est élément des $R_p$
@@ -169,8 +157,36 @@ r0 <- MULT(r0,r1)
 
 >A REVOIR
 
+
+### Plus Grand que
+
+```bash
+# Concept: si y est inférieur à x, la soustraction x-y renverras 0, et on entrera jamais dans répéter (false). Sinon, on continue de soustraire y (init r0 à vrai) et lorsquon aura soustrait le dernier facteur, on entrera pas dans la boucle, rendant le résultat définitif
+
+GT(x,y)
+	z <- MOINS(x,y)
+	REPEAT z fois[
+		r0 <- vrai
+	]
+```
+
+Plus grand OU égal
+
+```
+Concept: soit x et y, on veux verifier si x >= y
+x > = y :: NOT(y>x)
+
+5>=5 = NOT(5>5), FAUX QUI DEVIENT VRAI
+3>=1 = NOT (1>3), FAUX QUI DEVIENT VRAI
+3>=8 = NOT(8>3), VRAI QUI DEVIENT FAUX
+
+GTE(x,y)
+z <- (y>x)
+r0 <- NEG(z)
+
+```
 ---
-Division:
+### Division:
 
 ```bash
 #division de a/b
@@ -193,5 +209,39 @@ répéter a fois [
 Modulo:
 
 ```
-concept: x mod y, c est calculer x - (x/y)
+concept: x mod y, c'est trouver un r tel que x = q*y +r
+1) q = x/y (quotient)
+2) c = q*y (partie entiere)
+3)x - c = r (restant)
+
+q <- DIV(x,y)
+c <- MULT(q,y)
+r0 <- MOINS(x,c)
 ```
+
+### Premier :
+
+```
+Concept: tester tout les candidats de division, si nous arrivons au nombre initial, alors on laisse faux, si a un moment le modulo donne 0, alors on revoie vrai
+
+PRIME(x)
+
+r0<-faux
+si
+```
+
+
+---
+
+## Codage de Gödel
+
+Une façon de garder en mémoire un tableau sans structure concrète, consiste à encoder des valeurs séquentielles en le mettant comme puissances de nombres premiers successifs
+
+> (5, 2, 3, 17, 13, 0, 0, 0, …) devient $2^{5}3^{2}5^{3}7^{17}11^{13}$
+
+La profondeur du tableau est le niveau de puissance
+
+>((1, 2, 3, 0, …), (4, 5, 0, …), (6, 7, 0, …), 0, …) devient $2^{(2^{1}3^{2}5^{3})}3^{(2^{4}3^{5})}5^{(2^{6}3^{7})}$
+
+---
+
