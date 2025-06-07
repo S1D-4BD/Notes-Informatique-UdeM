@@ -70,7 +70,7 @@ $$n(n-1)(n-2)(n-...) \rightarrow n!$$
 Règle générale : si on tente de former **tout les vecteurs résultats d'une séquence de n tirs en ne modifiant pas le nombre de choix à chaque tour**, on a 3 choix pour la première, 3 pour la deuxième, 3 pour la nième; 
 
 >[!NOTE] 
->Astuce on forme un arbre dont le **nombre de branches reste le même à chaque niveau
+>Astuce on forme un arbre dont le **nombre de branches reste le même à chaque niveau**
 
 
 ## **Arrangements (partiel, ordonné)**
@@ -184,6 +184,67 @@ donc $\frac {18!}{14!4!}$
 
 	- Calculer les combinaisons de 2 bacs parmi 5 (choisir quels bac auront 7 balles)
 	- Multiplier par les combinaisons de 4 bâtons parmi 0+4 éléments ${4 \choose 4}$
+
+---
+
+# ==Inclusion- exclusion==
+
+$$Total \ valide = k^n - {k \choose 1} (k-1)^n + {k \choose 2} (k-2)^n - {k \choose 3} (k-3)^n ...$$
+qui va dans quoi -> quoi ^ qui
+
+==bon lorsque contrainte de non vide==
+
+lorsque >= N
+
+$$Total \ valide 2 = k^n - {k \choose 1} N(k-1) + {k \choose 2} (k-2)^n - {k \choose 3} (k-3)^n ...$$
+
+![[proba_include-exclude.png]]
+
+à revoir pour dérangement , exercice récapitulatif
+
+# Problèmes at most at least
+
+Em = Sm - (1 parmis m+1)Sm+1+ (2 parmis m+2)Sm+2 etc
+Lm = Sm - (1 parmis m)Sm+1+ (2 parmis m+1)Sm+2 etc
+Em = L - L m+1
+Soit le mot "ARRANGEMENT" compter pour ==Exactement 2 paires de lettres consécutives==
+
+les lettres sont **AARRNNGEEMT**
+
+Sans contrainte, problème de permutations sans distinctions : 11! /(2!)^4
+
+---
+
+- Objets ==**distincts**==
+
+|                **cas**                 |                     |
+| :------------------------------------: | :-----------------: |
+|     Groupes peuvent être **vides**     |      Power Set      |
+| Groupes doivent être ==**non vides**== | Inclusion-Exclusion |
+
+- Groupes non vides
+
+|                 **cas**                 |          |
+| :-------------------------------------: | :------: |
+| non vide + on veut exactement k groupes | Stirling |
+
+- Objets identiques
+
+|      **cas**       |            |
+| :----------------: | :--------: |
+| Groupes non nommés | Partitions |
+
+# **1.2 Binomiale**
+
+**==Identité de Pascal très utile==**
+
+$${n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}$$
+Cest combinaisons donnent un coefficient binomial utilisé dans l'expansion binomiales:
+
+$$(x+y)^n=\sum_{k=0}^{n} {n \choose k}x^{k}y^{n-k}$$
+
+
+
 
 
 ---
